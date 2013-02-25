@@ -1,0 +1,212 @@
+//
+// Responsive: Desktop and up
+// --------------------------------------------------
+
+@media (min-width: 768px) {
+
+  // Header
+  // ------
+  #header {
+
+    .container {
+      width: 940px;
+    }
+    .nav .nav-search {
+      width: auto;
+
+      form {
+        border-top: none;
+      }
+    }
+    .nav .nav-shopping {
+      clear: none;
+      float: right;
+      width: auto;
+
+      > a {
+        border-left: none;
+        border-top: none;
+      }
+    }
+  }
+
+  // Hero Units
+  // ----------
+  .hero-unit {
+    margin-bottom: 30px;
+    padding: 60px;
+
+    h1 {
+      font-size: 72px;
+    }
+    p {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  // Inverted hero unit
+  .hero-inverted {
+    padding: (@gridGutterWidth*2) 0; // 40px 0
+  }
+
+  // Hero with image background
+  .hero-image {
+    padding: 0; // redeclared for specificity
+  }
+
+  .hero-media {
+
+    .media {
+      margin-bottom: 20px;
+      min-height: 130px;
+    }
+  }
+
+  #hero-home {
+    position: relative;
+
+    > .nav {
+      border: none;
+      margin: 0;
+      width: 100%;
+
+      a {
+        background-color: @accentLight;
+        background-color: rgba(255,255,255,.2);
+        border: none;
+        .border-radius(0);
+        .box-shadow(~"inset 0 -2px 1px rgba(0,0,0,.2), 0 1px 1px rgba(255,255,255,.5)");
+        color: @blue;
+        font-family: @sansFontFamilyLight;
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0;
+        padding: 12px 15px;
+        position: relative;
+        .transition(all .2s ease-in-out);
+
+        &:hover {
+          background-color: @white;
+          .box-shadow(none);
+        }
+        .caret {
+          border-left-width: 12px;
+          border-right-width: 12px;
+          border-top-width: 12px;
+          border-top-color: transparent;
+          bottom: -11px;
+          left: 15px;
+          position: absolute;
+          z-index: 99;
+        }
+      }
+      li {
+        width: 50%;
+
+        &.active {
+
+          a {
+            background-color: @blue;
+            .box-shadow(none);
+            color: @white;
+
+            .caret {
+              border-top-color: @blue;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-unit {
+      height: 360px;
+      margin: 0;
+
+      nav {
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+
+        .caption {
+          padding: 20px 16px 18px;  
+        }
+        .nav {
+          margin: 0;
+        }
+        a {
+          background-color: @blue;
+          background-color: rgba(7,109,165,.85);
+          .border-radius(0);
+          color: @white;
+          font: 30px/24px @sansFontFamily;
+          margin: 0;
+          padding: 20px 13px 18px;          
+          .transition(all .2s ease-in-out);
+
+          &:hover {
+            background-color: @brand;
+          }
+          small {
+            color: @grayLight;
+            color: rgba(255,255,255,.8);
+            font-size: 18px;
+          }
+        }
+        h1 {
+          color: @accentLighter;
+          font-size: 34px;
+          line-height: 26px;
+          margin-bottom: 10px;
+
+          small {
+            color: @grayLighter;
+            font-size: 22px;
+          }
+        }
+        li {
+          padding-bottom: 2px;
+        }        
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    #personal {
+
+      nav {
+        left: 0;
+
+        li {
+          padding-left: 2px;
+        }
+      }
+    }
+
+    #business {
+
+      nav {
+        right: 0;
+
+        li {
+          padding-right: 2px;
+        }
+      }
+    }
+  }
+
+  .hero-unit {
+
+    &#personal {
+      background-image: url(../img/landings/individual/hero-individual.jpg);
+    }
+    &#business {
+      background-image: url(../img/landings/employer/hero-employer.jpg);
+    }
+    &#producer {
+      background-image: url(../img/landings/global/hero-global.jpg);
+    }
+  }
+}
